@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 	[SerializeField] private float m_speed;
+	[SerializeField] private float m_TurnSpeed;
 	[SerializeField] private KeyCode m_TopKey;
 	[SerializeField] private KeyCode m_Leftkey;
 	[SerializeField] private KeyCode m_RightKey;
 	[SerializeField] private KeyCode m_BottomKey;
 
+	private Quaternion StartRotation;
 	private Vector3 m_NewPosition;
 	private Transform m_PlayerTransform;
 	private Rigidbody m_PlayerRigidBody;
+
+
+	private Vector3 direction;
+
 	// Use this for initialization
 	void Start () {
 		m_PlayerTransform = GetComponent<Transform>();
@@ -37,8 +43,19 @@ public class PlayerMovement : MonoBehaviour {
 		{
 			m_NewPosition.x = m_PlayerTransform.position.x - (m_speed * Time.deltaTime);
 		}
+
+		if(Input.GetKey(m_TopKey) || Input.GetKey(m_BottomKey) || Input.GetKey(m_RightKey) || Input.GetKey(m_Leftkey))
+		{
+			direction = m_NewPosition - transform.position ;
+			Vector3 newDir = Vector3.RotateTowards(m_PlayerTransform.forward, direction, m_TurnSpeed * Time.deltaTime, 0.0f);
+			m_PlayerTransform.rotation = Quaternion.LookRotation(newDir);
+		}
+
+
 		m_NewPosition.y = m_PlayerTransform.position.y;
-		m_PlayerTransform.LookAt(m_NewPosition);
+		//StartRotation = m_PlayerTransform.rotation;
+		//transform. =  Vector3.Slerp(m_PlayerTransform.forward, m_NewPosition.normalized, m_TurnSpeed * Time.deltaTime);
+		//Debug.Log(transform.forward);
 		m_PlayerRigidBody.MovePosition(m_NewPosition);
 	}
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class DamHealth : MonoBehaviour {
 	[SerializeField] private List<SandBagArea> m_SandBagAreas;
 	[SerializeField] private float m_OriginalDamHealth = 20;
-	private float m_DamHealth;
+	public float m_DamHealth;
 	private Renderer m_Material;
 
 	// Use this for initialization
@@ -23,6 +23,14 @@ public class DamHealth : MonoBehaviour {
 		else if (m_DamHealth <= 5)
 		{
 			m_Material.material.color = Color.red;
+		}
+		if (m_DamHealth <= 0)
+		{
+			for (int i = 0; i < m_SandBagAreas.Count; i++)
+			{
+				Destroy(m_SandBagAreas[i].gameObject);
+			}
+			Destroy(gameObject);
 		}
 	}
 
