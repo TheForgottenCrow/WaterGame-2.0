@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SandBag : MonoBehaviour {
 	[SerializeField] public bool m_PickedUp;
+	public bool m_PlacedDown;
 	private Rigidbody m_SandBagRigidBody;
 
 	private void Start()

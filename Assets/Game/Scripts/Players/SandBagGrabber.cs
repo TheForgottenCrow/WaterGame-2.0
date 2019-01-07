@@ -51,7 +51,7 @@ public class SandBagGrabber : MonoBehaviour {
 				}
 			}
 		}
-		if (collision.gameObject.CompareTag("SpawnerCrate") && m_SandBagHolding != null)
+		if (collision.gameObject.CompareTag("SpawnerCrate") && m_SandBagHolding == null)
 		{
 			SpawnerBlock sandBagSpawner = collision.gameObject.GetComponent<SpawnerBlock>();
 
