@@ -6,8 +6,8 @@ public class SpawnerBlock : MonoBehaviour {
 	public int m_SandBagsInCrate;
 
 	[SerializeField] private GameObject m_SandBag;
-	[SerializeField] private float m_ValueNeededForSpawn;
-	[SerializeField] private float m_RespawnValue;
+	public float m_ValueNeededForSpawn;
+	public float m_RespawnValue;
 	
 
 	private float m_SandInput;
@@ -23,6 +23,7 @@ public class SpawnerBlock : MonoBehaviour {
 		if (m_RespawnValue >= m_ValueNeededForSpawn)
 		{
 			m_SandBagsInCrate++;
+			m_RespawnValue = 0;
 		}
 	}
 
