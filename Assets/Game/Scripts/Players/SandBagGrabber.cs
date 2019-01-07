@@ -36,31 +36,34 @@ public class SandBagGrabber : MonoBehaviour {
 					m_SandBagHolding.m_PickedUp = true;
 					m_CurrentlyHolding = true;
 				}
-				else if(m_SandBagHolding.m_PickedUp == true && m_CurrentlyHolding == true)
+				else if (m_SandBagHolding != null)
 				{
-					m_SandBagHolding.m_PickedUp = false;
-					m_CurrentlyHolding = false;
-					m_SandBagCollider.isTrigger = false;
-					m_SandBagPosition.parent = null;
-					m_SandBagPosition = null;
-					m_SandBagCollider = null;
-					m_SandBagHolding = null;
+					if (m_SandBagHolding.m_PickedUp == true && m_CurrentlyHolding == true)
+					{
+						m_SandBagHolding.m_PickedUp = false;
+						m_CurrentlyHolding = false;
+						m_SandBagCollider.isTrigger = false;
+						m_SandBagPosition.parent = null;
+						m_SandBagPosition = null;
+						m_SandBagCollider = null;
+						m_SandBagHolding = null;
+					}
 				}
 			}
-			else if (collision.gameObject.CompareTag("SpawnerCrate"))
-			{
-				SpawnerBlock sandBagSpawner = collision.gameObject.GetComponent<SpawnerBlock>();
+		}
+		if (collision.gameObject.CompareTag("SpawnerCrate") && m_SandBagHolding != null)
+		{
+			SpawnerBlock sandBagSpawner = collision.gameObject.GetComponent<SpawnerBlock>();
 
-				if (m_CurrentlyHolding == false && sandBagSpawner.m_SandBagsInCrate > 0)
-				{
-					m_SandBagHolding = sandBagSpawner.TakeFromCrate(transform);
-					m_SandBagPosition = m_SandBagHolding.gameObject.GetComponent<Transform>();
-					m_SandBagPosition.parent = transform.parent;
-					m_SandBagCollider = m_SandBagPosition.GetComponent<BoxCollider>();
-					m_SandBagCollider.isTrigger = true;
-					m_SandBagHolding.m_PickedUp = true;
-					m_CurrentlyHolding = true;
-				}
+			if (m_CurrentlyHolding == false && sandBagSpawner.m_SandBagsInCrate > 0)
+			{
+				m_SandBagHolding = sandBagSpawner.TakeFromCrate(transform);
+				m_SandBagPosition = m_SandBagHolding.gameObject.GetComponent<Transform>();
+				m_SandBagPosition.parent = transform.parent;
+				m_SandBagCollider = m_SandBagPosition.GetComponent<BoxCollider>();
+				m_SandBagCollider.isTrigger = true;
+				m_SandBagHolding.m_PickedUp = true;
+				m_CurrentlyHolding = true;
 			}
 		}
 	}
