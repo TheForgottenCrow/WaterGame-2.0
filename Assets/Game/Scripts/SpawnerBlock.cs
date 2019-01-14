@@ -23,7 +23,7 @@ public class SpawnerBlock : MonoBehaviour {
 		if (m_RespawnValue >= m_ValueNeededForSpawn)
 		{
 			m_SandBagsInCrate++;
-			m_RespawnValue = 0;
+			m_RespawnValue = 0;	
 		}
 	}
 
