@@ -9,9 +9,10 @@ public class SandBagArea : MonoBehaviour {
 
 	private void Update()
 	{
-		if (m_Full == true && m_InSandBag.m_PickedUp == false)
+		if (m_Full == true && m_InSandBag.m_PickedUp == false && m_InSandBag.m_PlacedDown == false)
 		{
 			m_InSandBag.gameObject.transform.position = transform.position;
+			m_InSandBag.m_PlacedDown = true;
 		}
 		if (m_Full)
 		{
@@ -44,6 +45,7 @@ public class SandBagArea : MonoBehaviour {
 		{
 			if (m_Full == true)
 			{
+				m_InSandBag.m_PlacedDown = false;
 				m_InSandBag = null;
 				m_SandBagHealth = null;
 				m_Full = false;

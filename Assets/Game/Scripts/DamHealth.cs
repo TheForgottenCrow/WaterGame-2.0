@@ -5,6 +5,9 @@ using UnityEngine;
 public class DamHealth : MonoBehaviour {
 	[SerializeField] private List<SandBagArea> m_SandBagAreas;
 	[SerializeField] private float m_OriginalDamHealth = 20;
+	[SerializeField] private GameObject m_LeakS;
+	[SerializeField] private GameObject m_LeakM;
+	[SerializeField] private GameObject m_LeakL;
 	public float m_DamHealth;
 	private Renderer m_Material;
 
@@ -16,22 +19,34 @@ public class DamHealth : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (m_DamHealth < m_OriginalDamHealth && m_DamHealth >= 5)
+		
+		
+		if (m_DamHealth < m_OriginalDamHealth - 5 && m_DamHealth >= m_OriginalDamHealth - 10)
 		{
-			m_Material.material.color = Color.blue;
+			m_LeakS.SetActive(true);
+			m_LeakM.SetActive(false);
+			m_LeakL.SetActive(false);
 		}
-		else if (m_DamHealth <= 5)
+		else if (m_DamHealth < m_OriginalDamHealth - 10 && m_DamHealth >= m_OriginalDamHealth - 15)
 		{
-			m_Material.material.color = Color.red;
+			m_LeakS.SetActive(false);
+			m_LeakM.SetActive(true);
+			m_LeakL.SetActive(false);
 		}
-		if (m_DamHealth <= 0)
+		else if (m_DamHealth < m_OriginalDamHealth - 15 && m_DamHealth >= m_OriginalDamHealth - 20)
 		{
-			for (int i = 0; i < m_SandBagAreas.Count; i++)
-			{
-				Destroy(m_SandBagAreas[i].gameObject);
-			}
-			Destroy(gameObject);
+			m_LeakS.SetActive(false);
+			m_LeakM.SetActive(false);
+			m_LeakL.SetActive(true);
 		}
+		//if (m_DamHealth <= 0)
+		//{
+		//	for (int i = 0; i < m_SandBagAreas.Count; i++)
+		//	{
+		//		Destroy(m_SandBagAreas[i].gameObject);
+		//	}
+		//	Destroy(gameObject);
+		//}
 	}
 
 	public void TakeDamage(float damage)

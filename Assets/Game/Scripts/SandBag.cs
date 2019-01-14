@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class SandBag : MonoBehaviour {
 	[SerializeField] public bool m_PickedUp;
+	public bool m_PlacedDown;
+	public bool m_BeingThrown;
 	private Rigidbody m_SandBagRigidBody;
+
 
 	private void Start()
 	{
 		m_SandBagRigidBody = GetComponent<Rigidbody>();
 	}
-	private void Update()
+
+	private void OnCollisionEnter(Collision collision)
 	{
-		m_SandBagRigidBody.velocity = Vector3.zero;
-		m_SandBagRigidBody.angularVelocity = Vector3.zero;
+		m_BeingThrown = false;
 	}
 }
+
+
