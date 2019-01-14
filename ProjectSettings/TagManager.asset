@@ -3,9 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - SandBag
-  - SpawnerCrate
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -15,12 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
-<<<<<<< HEAD
-  - Ripples
-=======
-  - WaterColisionIgnore
->>>>>>> master
+  - 
+  - 
   - 
   - 
   - 
