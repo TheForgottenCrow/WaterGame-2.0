@@ -5,8 +5,7 @@ Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_Name: WaterTexture
   m_Shader: {fileID: 4800000, guid: 4eace333a30adb048ba9efe4558b55b9, type: 3}
   m_ShaderKeywords: 
@@ -36,11 +35,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Amount: 0.285
+    - _Amount: 0.985
     - _BumpAmt: 3.9
     - _Foam: 0.57
-    - _Height: 0.064
-    - _Speed: 0.899
+    - _Height: 0.036
+    - _Speed: 1
     - _TextureDistort: 0.797
     m_Colors:
     - _Color: {r: 0, g: 0.5188679, b: 0.483715, a: 0.9098039}
