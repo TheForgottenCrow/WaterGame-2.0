@@ -46,7 +46,7 @@ public class SandBagGrabber : MonoBehaviour {
 				}
 			}
 		}
-		else if(m_SandBagHolding == null && collision.gameObject.CompareTag("SandBag") && collision.GetComponent<SandBag>().m_BeingThrown == true)
+		else if(m_CurrentlyHolding == false && collision.gameObject.CompareTag("SandBag") && collision.GetComponent<SandBag>().m_BeingThrown == true)
 		{
 			m_SandBagHolding = collision.gameObject.GetComponent<SandBag>();
 			if(m_SandBagHolding != m_SandBagIThrew)
@@ -106,5 +106,14 @@ public class SandBagGrabber : MonoBehaviour {
 		m_SandBagCollider = null;
 		m_SandBagHolding = null;
 		m_Rigidbody = null;
+	}
+
+	private void OnTriggerExit(Collider other)
+	{
+		if (m_SandBagIThrew != null)
+		if(other.gameObject == m_SandBagIThrew.gameObject)
+		{
+			m_SandBagIThrew = null;
+		}
 	}
 }
