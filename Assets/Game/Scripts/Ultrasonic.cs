@@ -6,6 +6,7 @@ using System.IO.Ports;
 
 public class Ultrasonic : MonoBehaviour
 {
+	[SerializeField] private SpawnerBlock m_SpawnerBlock;
     //get the serial port
     SerialPort m_SerialPort;
 
@@ -14,7 +15,7 @@ public class Ultrasonic : MonoBehaviour
     void Start()
     {
         //zoek voor de juiste COM (check in arduino code welke het is en pas de COM aan naar de gene die dr staat)
-        m_SerialPort = new SerialPort("COM4", 9600);
+        m_SerialPort = new SerialPort("COM6", 9600);
         //arduino openen
         m_SerialPort.Open();
         m_SerialPort.DiscardInBuffer();
@@ -26,11 +27,11 @@ public class Ultrasonic : MonoBehaviour
         String read = m_SerialPort.ReadLine();
         if (read == "true")
         {
-            Debug.Log("1");
+			m_SpawnerBlock.m_Interupted = true;
         }
         else if (read == "false")
         {
-            Debug.Log("0");
-        }
+			m_SpawnerBlock.m_Interupted = false;
+		}
     }
 }

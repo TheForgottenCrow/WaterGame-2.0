@@ -6,12 +6,13 @@ public class SpawnerBlock : MonoBehaviour {
 	public int m_SandBagsInCrate;
 
 	[SerializeField] private GameObject m_SandBag;
+	[SerializeField] private float m_SandInput;
 	public float m_ValueNeededForSpawn;
 	public float m_RespawnValue;
 	
 
-	private float m_SandInput;
-	private bool m_Interupted;
+	
+	public bool m_Interupted;
 
 	void Update()
 	{
