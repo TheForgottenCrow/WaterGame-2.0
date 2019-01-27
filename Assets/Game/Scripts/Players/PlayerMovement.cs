@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
-	[SerializeField] private float m_speed;
+	[SerializeField] private float m_Speed;
 	[SerializeField] private float m_TurnSpeed;
 	[SerializeField] private KeyCode m_TopKey;
 	[SerializeField] private KeyCode m_Leftkey;
@@ -29,19 +29,19 @@ public class PlayerMovement : MonoBehaviour {
 	void Update () {
 		if (Input.GetKey(m_TopKey))
 		{
-			m_NewPosition.z  = m_PlayerTransform.position.z + (m_speed * Time.deltaTime);
+			m_NewPosition.z  = m_PlayerTransform.position.z + (m_Speed * Time.deltaTime);
 		}
 		else if (Input.GetKey(m_BottomKey))
 		{
-			m_NewPosition.z  = m_PlayerTransform.position.z - (m_speed * Time.deltaTime);
+			m_NewPosition.z  = m_PlayerTransform.position.z - (m_Speed * Time.deltaTime);
 		}
 		if (Input.GetKey(m_RightKey))
 		{
-			m_NewPosition.x = m_PlayerTransform.position.x + (m_speed * Time.deltaTime);
+			m_NewPosition.x = m_PlayerTransform.position.x + (m_Speed * Time.deltaTime);
 		}
 		else if (Input.GetKey(m_Leftkey))
 		{
-			m_NewPosition.x = m_PlayerTransform.position.x - (m_speed * Time.deltaTime);
+			m_NewPosition.x = m_PlayerTransform.position.x - (m_Speed * Time.deltaTime);
 		}
 
 		if(Input.GetKey(m_TopKey) || Input.GetKey(m_BottomKey) || Input.GetKey(m_RightKey) || Input.GetKey(m_Leftkey))
