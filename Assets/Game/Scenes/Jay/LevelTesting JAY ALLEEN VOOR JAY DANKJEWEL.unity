@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18347077, g: 0.22746827, b: 0.29667136, a: 1}
+  m_IndirectSpecularColor: {r: 0.97363126, g: 0.9604461, b: 0.80517334, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -56,8 +56,8 @@ LightmapSettings:
   m_LightmapEditorSettings:
     serializedVersion: 10
     m_Resolution: 2
-    m_BakeResolution: 80
-    m_AtlasSize: 512
+    m_BakeResolution: 60
+    m_AtlasSize: 256
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -65,7 +65,7 @@ LightmapSettings:
     m_Padding: 4
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
-    m_TextureCompression: 0
+    m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
@@ -88,7 +88,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000002, guid: 1bfa8a43dca440548925c32778cb3a6b,
+  m_LightingDataAsset: {fileID: 112000000, guid: cc920413ebcc5424a969cdbcb5dfef0a,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -2589,6 +2589,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.58
@@ -2637,6 +2641,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: beea742977cf7834cb0a916d396bfbf2, type: 2}
+    - target: {fileID: 2300000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
+      propertyPath: m_StitchLightmapSeams
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
 --- !u!1001 &216953564
@@ -5427,6 +5435,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -51.02
@@ -5475,6 +5487,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: beea742977cf7834cb0a916d396bfbf2, type: 2}
+    - target: {fileID: 2300000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
+      propertyPath: m_StitchLightmapSeams
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
 --- !u!4 &474201847 stripped
@@ -7272,6 +7288,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2
@@ -7320,6 +7340,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: beea742977cf7834cb0a916d396bfbf2, type: 2}
+    - target: {fileID: 2300000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
+      propertyPath: m_StitchLightmapSeams
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
 --- !u!4 &698709936 stripped
@@ -8857,6 +8881,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -31.47
@@ -8905,6 +8933,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: beea742977cf7834cb0a916d396bfbf2, type: 2}
+    - target: {fileID: 2300000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
+      propertyPath: m_StitchLightmapSeams
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
 --- !u!1001 &831025930
@@ -9857,6 +9889,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -45.7
@@ -9905,6 +9941,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: beea742977cf7834cb0a916d396bfbf2, type: 2}
+    - target: {fileID: 2300000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
+      propertyPath: m_StitchLightmapSeams
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
 --- !u!1001 &953174966
@@ -11714,6 +11754,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -59.4
@@ -11762,6 +11806,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: beea742977cf7834cb0a916d396bfbf2, type: 2}
+    - target: {fileID: 2300000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
+      propertyPath: m_StitchLightmapSeams
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
 --- !u!4 &1168928093 stripped
@@ -14129,6 +14177,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -34.2
@@ -14177,6 +14229,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: beea742977cf7834cb0a916d396bfbf2, type: 2}
+    - target: {fileID: 2300000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
+      propertyPath: m_StitchLightmapSeams
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6d65ad4d7ce4f54d85c6c371b5a122a, type: 3}
 --- !u!4 &1429444384 stripped
@@ -19545,7 +19601,7 @@ Camera:
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: 0
+  m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
