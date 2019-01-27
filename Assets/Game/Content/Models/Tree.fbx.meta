@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ea1c80ea05e71974e9131edf5cbe6479
+guid: d6d65ad4d7ce4f54d85c6c371b5a122a
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,7 +8,7 @@ ModelImporter:
     2100000: lambert1
     2300000: //RootNode
     3300000: //RootNode
-    4300000: tail
+    4300000: Tree
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -71,7 +71,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
