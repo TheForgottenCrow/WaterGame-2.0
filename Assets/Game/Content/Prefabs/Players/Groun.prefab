@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de90ec1af4ee2be459eee99b100e0d5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 10
+  m_Speed: 10
   m_TurnSpeed: 10
   m_TopKey: 273
   m_Leftkey: 276
@@ -225,6 +225,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3873533047051199445}
     m_Modifications:
+    - target: {fileID: 100000, guid: 1f38e33b6498fdd4cb054cdeadc455d0, type: 3}
+      propertyPath: m_Name
+      value: BeaverWalkWobble
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1f38e33b6498fdd4cb054cdeadc455d0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -269,18 +273,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 1f38e33b6498fdd4cb054cdeadc455d0, type: 3}
-      propertyPath: m_Name
-      value: BeaverWalkWobble
-      objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: 1f38e33b6498fdd4cb054cdeadc455d0, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 70e8dd415fc17af49904a5c6c0b7d103, type: 2}
     - target: {fileID: 9500000, guid: 1f38e33b6498fdd4cb054cdeadc455d0, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: c7ade2903299f174c84b7ed292820cb0, type: 2}
+    - target: {fileID: 2300000, guid: 1f38e33b6498fdd4cb054cdeadc455d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 70e8dd415fc17af49904a5c6c0b7d103, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f38e33b6498fdd4cb054cdeadc455d0, type: 3}
 --- !u!4 &3873533048581576317 stripped
