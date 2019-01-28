@@ -27,6 +27,8 @@ public class PlayerMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		m_PlayerRigidBody.velocity = Vector3.zero;
+		m_PlayerRigidBody.angularVelocity = Vector3.zero;
 		if (Input.GetKey(m_TopKey))
 		{
 			m_NewPosition.z  = m_PlayerTransform.position.z + (m_Speed * Time.deltaTime);
