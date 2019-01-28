@@ -17,7 +17,7 @@ public class Ultrasonic : MonoBehaviour
     void Start()
     {
         //zoek voor de juiste COM (check in arduino code welke het is en pas de COM aan naar de gene die dr staat)
-        ThreadWork.m_SerialPort = new SerialPort("COM4", 9600);
+        ThreadWork.m_SerialPort = new SerialPort("COM6", 9600);
         //arduino openen
         
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DamHealth : MonoBehaviour {
 	[SerializeField] private List<SandBagArea> m_SandBagAreas;
@@ -19,7 +20,13 @@ public class DamHealth : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		for (int i = 0; i < m_SandBagAreas.Count; i++)
+		{
+			if(m_SandBagAreas[i].m_Full == true)
+			{
+				m_DamHealth = m_OriginalDamHealth;
+			}
+		}
 		
 		if (m_DamHealth < m_OriginalDamHealth - 5 && m_DamHealth >= m_OriginalDamHealth - 10)
 		{
@@ -39,14 +46,10 @@ public class DamHealth : MonoBehaviour {
 			m_LeakM.SetActive(false);
 			m_LeakL.SetActive(true);
 		}
-		//if (m_DamHealth <= 0)
-		//{
-		//	for (int i = 0; i < m_SandBagAreas.Count; i++)
-		//	{
-		//		Destroy(m_SandBagAreas[i].gameObject);
-		//	}
-		//	Destroy(gameObject);
-		//}
+		if (m_DamHealth <= 0)
+		{
+			SceneManager.LoadScene("DeathScene");
+		}
 	}
 
 	public void TakeDamage(float damage)
