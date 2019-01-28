@@ -16,6 +16,7 @@ public class SpawnerBlock : MonoBehaviour {
 
 	void Update()
 	{
+        m_Interupted = ThreadWork.interrupted;
 		if (m_Interupted == true)
 		{
 			m_RespawnValue += m_SandInput;
