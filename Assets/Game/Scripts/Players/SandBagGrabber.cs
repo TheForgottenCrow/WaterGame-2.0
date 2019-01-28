@@ -111,9 +111,11 @@ public class SandBagGrabber : MonoBehaviour {
 	private void OnTriggerExit(Collider other)
 	{
 		if (m_SandBagIThrew != null)
-		if(other.gameObject == m_SandBagIThrew.gameObject)
 		{
-			m_SandBagIThrew = null;
+			if (other.gameObject == m_SandBagIThrew.gameObject)
+			{
+				m_SandBagIThrew = null;
+			}
 		}
 	}
 }

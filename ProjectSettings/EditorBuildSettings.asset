@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game/Scenes/Jay/LevelTesting JAY ALLEEN VOOR JAY DANKJEWEL.unity
     guid: 0a73acb238cfd7b43adf27cae8b9ccdc
-  - enabled: 0
+  - enabled: 1
     path: Assets/Game/Scenes/VictoryScene.unity
     guid: b6675820122f6004e84377957350128f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Game/Scenes/DeathScene.unity
     guid: 8b4cedc4b010b884f8db1ca95d687d2f
   m_configObjects: {}

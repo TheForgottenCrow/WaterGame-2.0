@@ -20,7 +20,7 @@ public class DamManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		m_Timer -= Time.deltaTime;
-		m_CurrentGameTimer = -Time.deltaTime;
+		m_CurrentGameTimer = m_CurrentGameTimer -Time.deltaTime;
 		m_TimerText.text = Mathf.Round(m_CurrentGameTimer).ToString();
 		if(m_CurrentGameTimer <= 0)
 		{

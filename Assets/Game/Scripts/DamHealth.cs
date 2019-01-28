@@ -25,9 +25,11 @@ public class DamHealth : MonoBehaviour {
 			if(m_SandBagAreas[i].m_Full == true)
 			{
 				m_DamHealth = m_OriginalDamHealth;
+				m_LeakS.SetActive(false);
+				m_LeakM.SetActive(false);
+				m_LeakL.SetActive(false);
 			}
 		}
-		
 		if (m_DamHealth < m_OriginalDamHealth - 5 && m_DamHealth >= m_OriginalDamHealth - 10)
 		{
 			m_LeakS.SetActive(true);
